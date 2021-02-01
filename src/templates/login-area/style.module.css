@@ -1,0 +1,9 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleArea {
+  font-size: 2.2rem;
+  margin-bottom: 36px;
+}
