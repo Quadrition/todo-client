@@ -5,6 +5,7 @@ import styles from "./style.module.css";
 import { HomeTemplateProps } from "./types";
 
 import BoardsTitle from "../../molecules/boards-title/BoardsTitle";
+import NewBoardButton from "../../organisms/new-board-button/NewBoardButton";
 
 import { Col, Result, Row, Space } from "antd";
 
@@ -14,6 +15,9 @@ function HomeTemplate(props: HomeTemplateProps) {
       <Row align="middle">
         <Col flex="auto">
           <BoardsTitle />
+        </Col>
+        <Col>
+          <NewBoardButton />
         </Col>
       </Row>
     </Space>
