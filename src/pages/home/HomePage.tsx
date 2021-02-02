@@ -1,7 +1,22 @@
 import React from "react";
 
+import NavigationBar from "../../components/nav-bar/NavigationBar";
+
+import styles from "./style.module.css";
+
+import { Layout } from "antd";
+
+const { Header, Content } = Layout;
+
 function HomePage() {
-  return <React.Fragment>HomePage</React.Fragment>;
+  return (
+    <Layout className={styles.layout}>
+      <Header className={styles.header}>
+        <NavigationBar />
+      </Header>
+      <Content>Content</Content>
+    </Layout>
+  );
 }
 
 export default HomePage;
