@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import { Button, Form, Input, Popover, Space, Tooltip, Typography } from "antd";
+import { Button, Form, Input, Popover, Space } from "antd";
 
 import {
   AlignLeftOutlined,
