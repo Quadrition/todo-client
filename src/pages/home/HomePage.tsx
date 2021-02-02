@@ -1,6 +1,7 @@
 import React from "react";
 
 import NavigationBar from "../../components/organisms/nav-bar/NavigationBar";
+import HomeTemplateContainer from "../../components/templates/home-template/HomeTemplateContainer";
 
 import styles from "./style.module.css";
 
@@ -14,7 +15,9 @@ function HomePage() {
       <Header className={styles.header}>
         <NavigationBar />
       </Header>
-      <Content>Content</Content>
+      <Content className={styles.content}>
+        <HomeTemplateContainer />
+      </Content>
     </Layout>
   );
 }
