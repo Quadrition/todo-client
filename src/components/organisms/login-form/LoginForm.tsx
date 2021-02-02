@@ -1,36 +1,14 @@
 import React from "react";
 
-import styles from "./style.module.css";
-
-import { Link } from "react-router-dom";
+import { LoginFormProps } from "./types";
 
 import { Form, Input, Button } from "antd";
 
 import { KeyOutlined, MailOutlined } from "@ant-design/icons";
 
-interface Props {
-  emailHelp: string | undefined;
-  emailValidateStatus:
-    | ""
-    | "warning"
-    | "success"
-    | "error"
-    | "validating"
-    | undefined;
-  passwordHelp: string | undefined;
-  passwordValidateStatus:
-    | ""
-    | "warning"
-    | "success"
-    | "error"
-    | "validating"
-    | undefined;
-  onTextChange: () => void;
-}
-
-function LoginForm(props: Props) {
+function LoginForm(props: LoginFormProps) {
   return (
-    <Form>
+    <Form onFinish={props.onLogin}>
       <Form.Item
         name="email"
         rules={[
@@ -42,15 +20,8 @@ function LoginForm(props: Props) {
           },
         ]}
         hasFeedback
-        help={props.emailHelp}
-        validateStatus={props.emailValidateStatus}
       >
-        <Input
-          prefix={<MailOutlined />}
-          placeholder="Email"
-          size="large"
-          onChange={props.onTextChange}
-        />
+        <Input prefix={<MailOutlined />} placeholder="Email" size="large" />
       </Form.Item>
       <Form.Item
         name="password"
@@ -66,23 +37,17 @@ function LoginForm(props: Props) {
           },
         ]}
         hasFeedback
-        help={props.passwordHelp}
-        validateStatus={props.passwordValidateStatus}
       >
         <Input.Password
           prefix={<KeyOutlined />}
           size="large"
           placeholder="Password"
-          onChange={props.onTextChange}
         />
       </Form.Item>
       <Form.Item>
-        <Button type="primary" htmlType="submit" block>
+        <Button type="primary" htmlType="submit" block loading={props.loading}>
           Log in
         </Button>
-        <Link to="/register" className={styles.registerLink}>
-          Don't have an account? Register
-        </Link>
       </Form.Item>
     </Form>
   );
