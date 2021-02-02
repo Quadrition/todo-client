@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavigationBar from "../../components/nav-bar/NavigationBar";
+import NavigationBar from "../../components/organisms/nav-bar/NavigationBar";
 
 import styles from "./style.module.css";
 

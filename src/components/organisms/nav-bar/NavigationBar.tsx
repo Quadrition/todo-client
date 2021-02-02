@@ -15,7 +15,7 @@ function NavigationBar() {
         <Image
           preview={false}
           width={200}
-          src={require("../../assets/images/logo-nav.png").default}
+          src={require("../../../assets/images/logo-nav.png").default}
         />
       </Link>
 

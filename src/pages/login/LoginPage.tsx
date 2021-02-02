@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import LoginArea from "../../templates/login-area/LoginArea";
+import LoginArea from "../../components/templates/login-area/LoginArea";
 
 import { Layout, Row, Col } from "antd";
 

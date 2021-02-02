@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import LoginFormContainer from "../../components/login-form/LoginFormContainer";
+import LoginFormContainer from "../../organisms/login-form/LoginFormContainer";
 
 import { Space } from "antd";
 
