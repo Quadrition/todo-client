@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from "./style.module.css";
 
+import NavigationBarActionsContainer from "../../molecules/nav-bar-actions/NavigationBarActionsContainer";
+
 import { Link } from "react-router-dom";
 
-import { Image, Menu } from "antd";
-
-import { LoginOutlined } from "@ant-design/icons";
+import { Image } from "antd";
 
 function NavigationBar() {
   return (
@@ -21,11 +21,7 @@ function NavigationBar() {
 
       <div className={styles.emptySpace}></div>
 
-      <Menu mode="horizontal">
-        <Menu.Item icon={<LoginOutlined />}>
-          <Link to="/login">Login</Link>
-        </Menu.Item>
-      </Menu>
+      <NavigationBarActionsContainer />
     </div>
   );
 }
