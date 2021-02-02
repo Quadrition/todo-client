@@ -4,16 +4,7 @@ import styles from "./style.module.css";
 
 import LoginArea from "../../templates/login-area/LoginArea";
 
-import {
-  Layout,
-  Input,
-  Button,
-  Row,
-  Col,
-  Image,
-  Typography,
-  notification,
-} from "antd";
+import { Layout, Row, Col } from "antd";
 
 const { Content } = Layout;
 
