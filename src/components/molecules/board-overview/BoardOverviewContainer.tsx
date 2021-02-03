@@ -1,9 +1,9 @@
 import React from "react";
 
 import BoardOverview from "./BoardOverview";
-import { BoardOverviewProps } from "./types";
+import { BoardOverviewContainerProps } from "./types";
 
-function BoardOverviewContainer(props: BoardOverviewProps) {
+function BoardOverviewContainer(props: BoardOverviewContainerProps) {
   return <BoardOverview board={props.board} />;
 }
 

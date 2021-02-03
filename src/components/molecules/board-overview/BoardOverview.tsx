@@ -1,9 +1,10 @@
 import React from "react";
 
 import { BoardOverviewProps } from "./types";
+import DeleteBoardButtonContainer from "../delete-board-button/DeleteBoardButtonContainer";
 
 import { Button, Card, Col, Row, Space, Typography } from "antd";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import { EditOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
@@ -21,9 +22,7 @@ function BoardOverview(props: BoardOverviewProps) {
             <Button shape="circle">
               <EditOutlined />
             </Button>
-            <Button shape="circle">
-              <DeleteOutlined />
-            </Button>
+            <DeleteBoardButtonContainer board={props.board} />
           </Space>
         </Col>
       </Row>
