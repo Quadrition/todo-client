@@ -6,6 +6,7 @@ import { HomeTemplateProps } from "./types";
 
 import BoardsTitle from "../../molecules/boards-title/BoardsTitle";
 import NewBoardButton from "../../organisms/new-board-button/NewBoardButton";
+import BoardsAreaContainer from "../../organisms/boards-area/BoardsAreaContainer";
 
 import { Col, Result, Row, Space } from "antd";
 
@@ -20,6 +21,7 @@ function HomeTemplate(props: HomeTemplateProps) {
           <NewBoardButton />
         </Col>
       </Row>
+      <BoardsAreaContainer />
     </Space>
   ) : (
     <Result
