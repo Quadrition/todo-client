@@ -1,4 +1,4 @@
-import { SET_BOARDS, BoardState, BoardActionTypes } from "./types";
+import { SET_BOARDS, BoardState, BoardActionTypes, ADD_BOARD } from "./types";
 
 const initialState: BoardState = { boards: [] };
 
@@ -11,6 +11,9 @@ export function boardReducer(
       return {
         boards: action.payload.boards,
       };
+    case ADD_BOARD:
+      state.boards.push(action.payload.board);
+      return state;
     default:
       return state;
   }

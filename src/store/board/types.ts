@@ -1,4 +1,5 @@
 export const SET_BOARDS = "board/setBoards";
+export const ADD_BOARD = "board/addBoard";
 
 export interface Board {
   name: string;
@@ -13,4 +14,9 @@ interface SetBoardsAction {
   payload: { boards: Board[] };
 }
 
-export type BoardActionTypes = SetBoardsAction;
+interface AddBoardAction {
+  type: typeof ADD_BOARD;
+  payload: { board: Board };
+}
+
+export type BoardActionTypes = SetBoardsAction | AddBoardAction;
