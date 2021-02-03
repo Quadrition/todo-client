@@ -2,7 +2,7 @@ import React from "react";
 
 import { BoardOverviewProps } from "./types";
 
-import { Card, Col, Row, Space, Typography } from "antd";
+import { Button, Card, Col, Row, Space, Typography } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
@@ -17,9 +17,13 @@ function BoardOverview(props: BoardOverviewProps) {
           </Title>
         </Col>
         <Col>
-          <Space direction="vertical">
-            <EditOutlined />
-            <DeleteOutlined />
+          <Space size="small" direction="vertical">
+            <Button shape="circle">
+              <EditOutlined />
+            </Button>
+            <Button shape="circle">
+              <DeleteOutlined />
+            </Button>
           </Space>
         </Col>
       </Row>
