@@ -6,7 +6,7 @@ import NewBoardButton from "./NewBoardButton";
 import { useDispatch } from "react-redux";
 import { addBoard } from "../../../store/board/actions";
 
-import { Form } from "antd";
+import { Form, message } from "antd";
 
 function NewBoardButtonContainer() {
   const dispatch = useDispatch();
@@ -18,11 +18,15 @@ function NewBoardButtonContainer() {
   const handleAdd = (value: Board) => {
     dispatch(addBoard(value));
     setPopoverVisible(false);
+    message.success("Successfully added");
   };
 
   const handlePopoverVisibleChange = (visible: boolean) => {
     setPopoverVisible(visible);
-    form.resetFields();
+
+    if (!visible) {
+      form.resetFields();
+    }
   };
 
   return (
