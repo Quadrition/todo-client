@@ -1,4 +1,10 @@
-import { SET_BOARDS, BoardState, BoardActionTypes, ADD_BOARD } from "./types";
+import {
+  SET_BOARDS,
+  BoardState,
+  BoardActionTypes,
+  ADD_BOARD,
+  REMOVE_BOARD,
+} from "./types";
 
 const initialState: BoardState = { boards: [] };
 
@@ -15,6 +21,11 @@ export function boardReducer(
       return {
         ...state,
         boards: [...state.boards, action.payload.board],
+      };
+    case REMOVE_BOARD:
+      return {
+        ...state,
+        boards: state.boards.filter((board) => board !== action.payload.board),
       };
     default:
       return state;
