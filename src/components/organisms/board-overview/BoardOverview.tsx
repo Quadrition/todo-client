@@ -1,7 +1,7 @@
 import React from "react";
 
 import { BoardOverviewProps } from "./types";
-import DeleteBoardButtonContainer from "../delete-board-button/DeleteBoardButtonContainer";
+import DeleteBoardButtonContainer from "../../molecules/delete-board-button/DeleteBoardButtonContainer";
 
 import { Button, Card, Col, Row, Space, Typography } from "antd";
 import { EditOutlined } from "@ant-design/icons";
