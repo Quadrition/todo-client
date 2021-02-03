@@ -12,8 +12,10 @@ export function boardReducer(
         boards: action.payload.boards,
       };
     case ADD_BOARD:
-      state.boards.push(action.payload.board);
-      return state;
+      return {
+        ...state,
+        boards: [...state.boards, action.payload.board],
+      };
     default:
       return state;
   }
