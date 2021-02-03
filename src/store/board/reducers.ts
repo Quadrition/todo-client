@@ -9,7 +9,7 @@ export function boardReducer(
   switch (action.type) {
     case SET_BOARDS:
       return {
-        boards: action.payload,
+        boards: action.payload.boards,
       };
     default:
       return state;

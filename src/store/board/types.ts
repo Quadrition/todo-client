@@ -10,7 +10,7 @@ export interface BoardState {
 
 interface SetBoardsAction {
   type: typeof SET_BOARDS;
-  payload: Board[];
+  payload: { boards: Board[] };
 }
 
 export type BoardActionTypes = SetBoardsAction;
