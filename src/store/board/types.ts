@@ -1,5 +1,6 @@
 export const SET_BOARDS = "board/setBoards";
 export const ADD_BOARD = "board/addBoard";
+export const EDIT_BOARD = "board/editBoard";
 export const REMOVE_BOARD = "board/removeBoard";
 
 export interface Board {
@@ -20,6 +21,11 @@ interface AddBoardAction {
   payload: { board: Board };
 }
 
+interface EditBoardAction {
+  type: typeof EDIT_BOARD;
+  payload: { board: Board; value: string };
+}
+
 interface RemoveBoardAction {
   type: typeof REMOVE_BOARD;
   payload: { board: Board };
@@ -28,4 +34,5 @@ interface RemoveBoardAction {
 export type BoardActionTypes =
   | SetBoardsAction
   | AddBoardAction
+  | EditBoardAction
   | RemoveBoardAction;
