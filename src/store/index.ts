@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from "redux";
 
 import { accountReducer } from "./account/reducers";
+import { boardReducer } from "./board/reducers";
 
 const rootReducer = combineReducers({
   account: accountReducer,
+  board: boardReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
