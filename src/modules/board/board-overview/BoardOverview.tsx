@@ -4,26 +4,26 @@ import { BoardOverviewProps } from "./types";
 import DeleteBoardButtonContainer from "../delete-board-button/DeleteBoardButtonContainer";
 import EditBoardButtonContainer from "../edit-board-button/EditBoardButtonContainer";
 
-import { Card, Col, Row, Space, Typography } from "antd";
+import { Card } from "antd";
 
-const { Title } = Typography;
+import { FileTextOutlined } from "@ant-design/icons";
+
+const { Meta } = Card;
 
 function BoardOverview(props: BoardOverviewProps) {
   return (
-    <Card size="small" style={{ width: 200 }} hoverable>
-      <Row align="middle" wrap={false} gutter={10}>
-        <Col flex="auto">
-          <Title level={5} ellipsis={{ rows: 2 }}>
-            {props.board.name}
-          </Title>
-        </Col>
-        <Col>
-          <Space size="small" direction="vertical">
-            <EditBoardButtonContainer board={props.board} />
-            <DeleteBoardButtonContainer board={props.board} />
-          </Space>
-        </Col>
-      </Row>
+    <Card
+      hoverable
+      actions={[
+        <EditBoardButtonContainer board={props.board} key="edit" />,
+        <DeleteBoardButtonContainer board={props.board} key="delete" />,
+      ]}
+    >
+      <Meta
+        avatar={<FileTextOutlined />}
+        title={props.board.name}
+        description="The description of the board"
+      />
     </Card>
   );
 }

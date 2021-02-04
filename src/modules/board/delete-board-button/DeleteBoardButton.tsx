@@ -2,7 +2,7 @@ import React from "react";
 
 import { DeleteBoardButtonProps } from "./types";
 
-import { Button, Popconfirm } from "antd";
+import { Popconfirm } from "antd";
 
 import { DeleteOutlined } from "@ant-design/icons";
 
@@ -14,9 +14,7 @@ function DeleteBoardButton(props: DeleteBoardButtonProps) {
       okText="Yes"
       cancelText="No"
     >
-      <Button shape="circle">
-        <DeleteOutlined />
-      </Button>
+      <DeleteOutlined />
     </Popconfirm>
   );
 }

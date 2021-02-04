@@ -44,9 +44,7 @@ function EditBoardButton(props: EditBoardButtonProps) {
       visible={props.popoverVisible}
       onVisibleChange={props.onPopoverVisibleChange}
     >
-      <Button shape="circle">
-        <EditOutlined />
-      </Button>
+      <EditOutlined />
     </Popover>
   );
 }
