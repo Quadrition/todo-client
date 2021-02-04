@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 
 import { HomeTemplateProps } from "./types";
 
-import BoardsTitle from "../boards-title/BoardsTitle";
+import HomeBoardsTitle from "../home-boards-title/HomeBoardsTitle";
 import NewBoardButtonContainer from "../../board/new-board-button/NewBoardButtonContainer";
 import BoardsAreaContainer from "../boards-area/BoardsAreaContainer";
 
@@ -15,7 +15,7 @@ function HomeTemplate(props: HomeTemplateProps) {
     <Space direction="vertical" size="large" className={styles.root}>
       <Row align="middle">
         <Col flex="auto">
-          <BoardsTitle />
+          <HomeBoardsTitle />
         </Col>
         <Col>
           <NewBoardButtonContainer />

@@ -6,7 +6,7 @@ import { Space } from "antd";
 
 import { SnippetsOutlined } from "@ant-design/icons";
 
-function BoardsTitle() {
+function HomeBoardsTitle() {
   return (
     <Space size="middle" align="center" className={styles.title}>
       <SnippetsOutlined />
@@ -15,4 +15,4 @@ function BoardsTitle() {
   );
 }
 
-export default BoardsTitle;
+export default HomeBoardsTitle;
