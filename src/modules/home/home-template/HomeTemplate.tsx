@@ -6,7 +6,7 @@ import { HomeTemplateProps } from "./types";
 
 import HomeBoardsTitle from "../home-boards-title/HomeBoardsTitle";
 import NewBoardButtonContainer from "../../board/new-board-button/NewBoardButtonContainer";
-import BoardsAreaContainer from "../boards-area/BoardsAreaContainer";
+import HomeBoardsAreaContainer from "../home-boards-area/HomeBoardsAreaContainer";
 
 import { Col, Result, Row, Space } from "antd";
 
@@ -21,7 +21,7 @@ function HomeTemplate(props: HomeTemplateProps) {
           <NewBoardButtonContainer />
         </Col>
       </Row>
-      <BoardsAreaContainer />
+      <HomeBoardsAreaContainer />
     </Space>
   ) : (
     <Result

@@ -1,5 +1,5 @@
 import { Board } from "../../../store/board/types";
 
-export interface BoardsAreaProps {
+export interface HomeBoardsAreaProps {
   boards: Board[];
 }
