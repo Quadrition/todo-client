@@ -5,6 +5,7 @@ import {
   BoardActionTypes,
   REMOVE_BOARD,
   EDIT_BOARD,
+  SET_SELECTED_BOARD,
 } from "./types";
 
 export function setBoards(boards: Board[]): BoardActionTypes {
@@ -31,6 +32,13 @@ export function editBoard(board: Board, value: string): BoardActionTypes {
 export function removeBoard(board: Board): BoardActionTypes {
   return {
     type: REMOVE_BOARD,
+    payload: { board },
+  };
+}
+
+export function setSelectedBoard(board: Board): BoardActionTypes {
+  return {
+    type: SET_SELECTED_BOARD,
     payload: { board },
   };
 }

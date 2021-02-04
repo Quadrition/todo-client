@@ -15,6 +15,7 @@ function BoardOverview(props: BoardOverviewProps) {
     <Badge count={props.tasks}>
       <Card
         hoverable
+        onClick={props.onBoardClick}
         actions={[
           <EditBoardButtonContainer board={props.board} key="edit" />,
           <DeleteBoardButtonContainer board={props.board} key="delete" />,

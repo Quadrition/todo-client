@@ -5,9 +5,10 @@ import {
   ADD_BOARD,
   REMOVE_BOARD,
   EDIT_BOARD,
+  SET_SELECTED_BOARD,
 } from "./types";
 
-const initialState: BoardState = { boards: [] };
+const initialState: BoardState = { boards: [], selected: null };
 
 export function boardReducer(
   state = initialState,
@@ -16,6 +17,7 @@ export function boardReducer(
   switch (action.type) {
     case SET_BOARDS:
       return {
+        ...state,
         boards: action.payload.boards,
       };
     case ADD_BOARD:
@@ -34,6 +36,11 @@ export function boardReducer(
       return {
         ...state,
         boards: state.boards.filter((board) => board !== action.payload.board),
+      };
+    case SET_SELECTED_BOARD:
+      return {
+        ...state,
+        selected: action.payload.board,
       };
     default:
       return state;

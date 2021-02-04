@@ -7,4 +7,5 @@ export interface BoardOverviewContainerProps {
 export interface BoardOverviewProps {
   tasks: number;
   board: Board;
+  onBoardClick: () => void;
 }
