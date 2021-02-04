@@ -29,6 +29,12 @@ function EditBoardButtonContainer(props: EditBoardButtonContainerProps) {
     }
   };
 
+  const handleEditButtonClick = (
+    event: React.MouseEvent<HTMLSpanElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+  };
+
   return (
     <EditBoardButton
       board={props.board}
@@ -36,6 +42,7 @@ function EditBoardButtonContainer(props: EditBoardButtonContainerProps) {
       popoverVisible={popoverVisible}
       onPopoverVisibleChange={handlePopoverVisibleChange}
       form={form}
+      onEditButtonClick={handleEditButtonClick}
     />
   );
 }

@@ -44,7 +44,7 @@ function EditBoardButton(props: EditBoardButtonProps) {
       visible={props.popoverVisible}
       onVisibleChange={props.onPopoverVisibleChange}
     >
-      <EditOutlined />
+      <EditOutlined onClick={props.onEditButtonClick} />
     </Popover>
   );
 }

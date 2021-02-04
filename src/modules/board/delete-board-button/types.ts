@@ -6,4 +6,7 @@ export interface DeleteBoardButtonContainerProps {
 
 export interface DeleteBoardButtonProps {
   onRemove: () => void;
+  onDeleteButtonClick: (
+    event: React.MouseEvent<HTMLSpanElement, MouseEvent>
+  ) => void;
 }

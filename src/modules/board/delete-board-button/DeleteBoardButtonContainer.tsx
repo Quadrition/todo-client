@@ -16,7 +16,18 @@ function DeleteBoardButtonContainer(props: DeleteBoardButtonContainerProps) {
     message.success("Successfully deleted");
   };
 
-  return <DeleteBoardButton onRemove={handleRemove} />;
+  const handleDeleteButtonClick = (
+    event: React.MouseEvent<HTMLSpanElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+  };
+
+  return (
+    <DeleteBoardButton
+      onDeleteButtonClick={handleDeleteButtonClick}
+      onRemove={handleRemove}
+    />
+  );
 }
 
 export default DeleteBoardButtonContainer;

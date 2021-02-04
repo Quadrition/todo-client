@@ -12,4 +12,7 @@ export interface EditBoardButtonProps {
   popoverVisible: boolean;
   onPopoverVisibleChange: (visible: boolean) => void;
   form: FormInstance<any>;
+  onEditButtonClick: (
+    event: React.MouseEvent<HTMLSpanElement, MouseEvent>
+  ) => void;
 }

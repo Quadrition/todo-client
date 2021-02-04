@@ -14,7 +14,7 @@ function DeleteBoardButton(props: DeleteBoardButtonProps) {
       okText="Yes"
       cancelText="No"
     >
-      <DeleteOutlined />
+      <DeleteOutlined onClick={props.onDeleteButtonClick} />
     </Popconfirm>
   );
 }
