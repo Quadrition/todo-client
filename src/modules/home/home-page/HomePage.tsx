@@ -1,9 +1,9 @@
 import React from "react";
 
-import NavigationBar from "../../components/organisms/nav-bar/NavigationBar";
-import HomeTemplateContainer from "../../components/templates/home-template/HomeTemplateContainer";
-
 import styles from "./style.module.css";
+
+import NavigationBar from "../../../core/nav-bar/NavigationBar";
+import HomeTemplateContainer from "../home-template/HomeTemplateContainer";
 
 import { Layout } from "antd";
 

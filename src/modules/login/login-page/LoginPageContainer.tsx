@@ -5,7 +5,7 @@ import LoginPage from "./LoginPage";
 import { Redirect } from "react-router-dom";
 
 import { useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { RootState } from "../../../store";
 
 function LoginPageContainer() {
   const isLogged: boolean = useSelector(

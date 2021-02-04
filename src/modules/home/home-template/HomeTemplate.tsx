@@ -4,9 +4,9 @@ import styles from "./style.module.css";
 
 import { HomeTemplateProps } from "./types";
 
-import BoardsTitle from "../../molecules/boards-title/BoardsTitle";
-import NewBoardButtonContainer from "../../organisms/new-board-button/NewBoardButtonContainer";
-import BoardsAreaContainer from "../../organisms/boards-area/BoardsAreaContainer";
+import BoardsTitle from "../boards-title/BoardsTitle";
+import NewBoardButtonContainer from "../../board/new-board-button/NewBoardButtonContainer";
+import BoardsAreaContainer from "../boards-area/BoardsAreaContainer";
 
 import { Col, Result, Row, Space } from "antd";
 

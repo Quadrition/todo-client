@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import BoardOverviewContainer from "../board-overview/BoardOverviewContainer";
+import BoardOverviewContainer from "../../board/board-overview/BoardOverviewContainer";
 import { BoardsAreaProps } from "./types";
 
 import { Empty, Space } from "antd";

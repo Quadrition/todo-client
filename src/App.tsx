@@ -2,9 +2,9 @@ import React from "react";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import BoardPage from "./pages/board/BoardPage";
-import HomePage from "./pages/home/HomePage";
-import LoginPageContainer from "./pages/login/LoginPageContainer";
+import LoginPageContainer from "./modules/login/login-page/LoginPageContainer";
+import HomePage from "./modules/home/home-page/HomePage";
+import BoardPage from "./modules/board/board-page/BoardPage";
 
 import { Provider } from "react-redux";
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import NavigationBarActionsContainer from "../../molecules/nav-bar-actions/NavigationBarActionsContainer";
+import NavigationBarActionsContainer from "../nav-bar-actions/NavigationBarActionsContainer";
 
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ function NavigationBar() {
         <Image
           preview={false}
           width={200}
-          src={require("../../../assets/images/logo-nav.png").default}
+          src={require("../../assets/images/logo-nav.png").default}
         />
       </Link>
 
