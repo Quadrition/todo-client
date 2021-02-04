@@ -1,0 +1,28 @@
+.layout {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+
+.headerArea {
+  width: 100%;
+  max-width: 860px;
+}
+
+.tasksArea {
+  height: 100%;
+  width: 100%;
+  max-width: 860px;
+}
