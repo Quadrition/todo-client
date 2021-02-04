@@ -11,7 +11,7 @@ function HomeBoardsArea(props: HomeBoardsAreaProps) {
   return props.boards.length === 0 ? (
     <Empty description="No boards" className={styles.empty} />
   ) : (
-    <Space wrap>
+    <Space wrap size="middle">
       {props.boards.map((board) => (
         <BoardOverviewContainer board={board} />
       ))}
