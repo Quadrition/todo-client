@@ -1,7 +1,5 @@
 import React from "react";
 
-import styles from "./style.module.css";
-
 import { TaskOverviewProps } from "./types";
 import TaskTag from "../task-tag/TaskTag";
 
@@ -16,9 +14,7 @@ function TaskOverview(props: TaskOverviewProps) {
     <Card size="small" hoverable style={{ maxWidth: 200 }}>
       <Row align="middle" wrap={false} gutter={10}>
         <Col flex="auto">
-          <Paragraph strong ellipsis={{ rows: 2 }}>
-            {props.task.name}
-          </Paragraph>
+          <Paragraph ellipsis={{ rows: 2 }}>{props.task.name}</Paragraph>
           {props.task.tags.map((tag) => (
             <TaskTag tag={tag} />
           ))}
