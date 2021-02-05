@@ -2,10 +2,19 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import { Card } from "antd";
+import { Card, Space } from "antd";
+
+import { ExceptionOutlined } from "@ant-design/icons";
 
 function BoardTodoArea() {
-  return <Card title="Todo tasks" className={styles.root}></Card>;
+  const title = (
+    <Space>
+      <ExceptionOutlined />
+      Todo tasks
+    </Space>
+  );
+
+  return <Card title={title} className={styles.root}></Card>;
 }
 
 export default BoardTodoArea;
