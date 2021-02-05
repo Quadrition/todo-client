@@ -8,7 +8,8 @@
 }
 
 .imageArea {
-  background-color: #1890ff;
+  background-image: url("../../../assets/images/login-background.jpg");
+  background-size: cover;
 }
 
 .loginArea {
