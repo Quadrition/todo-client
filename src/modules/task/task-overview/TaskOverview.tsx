@@ -1,0 +1,41 @@
+import React from "react";
+
+import styles from "./style.module.css";
+
+import { TaskOverviewProps } from "./types";
+import TaskTag from "../task-tag/TaskTag";
+
+import { Button, Card, Col, Row, Space, Tag, Typography } from "antd";
+
+import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+
+const { Paragraph } = Typography;
+
+function TaskOverview(props: TaskOverviewProps) {
+  return (
+    <Card size="small" hoverable style={{ maxWidth: 200 }}>
+      <Row align="middle" wrap={false} gutter={10}>
+        <Col flex="auto">
+          <Paragraph strong ellipsis={{ rows: 2 }}>
+            {props.task.name}
+          </Paragraph>
+          {props.task.tags.map((tag) => (
+            <TaskTag tag={tag} />
+          ))}
+        </Col>
+        <Col>
+          <Space size="small" direction="vertical">
+            <Button shape="circle">
+              <EditOutlined />
+            </Button>
+            <Button shape="circle">
+              <DeleteOutlined />
+            </Button>
+          </Space>
+        </Col>
+      </Row>
+    </Card>
+  );
+}
+
+export default TaskOverview;
