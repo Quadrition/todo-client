@@ -3,10 +3,9 @@ import React from "react";
 import { TaskOverviewProps } from "./types";
 import TaskTag from "../task-tag/TaskTag";
 import EditTaskButtonContainer from "../edit-task-button/EditTaskButtonContainer";
+import DeleteTaskButtonContainer from "../delete-task-button/DeleteTaskButtonContainer";
 
-import { Button, Card, Col, Row, Space, Typography } from "antd";
-
-import { DeleteOutlined } from "@ant-design/icons";
+import { Card, Col, Row, Space, Typography } from "antd";
 
 const { Paragraph } = Typography;
 
@@ -23,9 +22,7 @@ function TaskOverview(props: TaskOverviewProps) {
         <Col>
           <Space size="small" direction="vertical">
             <EditTaskButtonContainer task={props.task} />
-            <Button shape="circle">
-              <DeleteOutlined />
-            </Button>
+            <DeleteTaskButtonContainer task={props.task} />
           </Space>
         </Col>
       </Row>
