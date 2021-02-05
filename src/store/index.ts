@@ -2,10 +2,12 @@ import { combineReducers, createStore } from "redux";
 
 import { accountReducer } from "./account/reducers";
 import { boardReducer } from "./board/reducers";
+import { taskReducer } from "./task/reducers";
 
 const rootReducer = combineReducers({
   account: accountReducer,
   board: boardReducer,
+  task: taskReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
