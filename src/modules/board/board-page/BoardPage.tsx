@@ -23,7 +23,7 @@ function BoardPage(props: BoardPageProps) {
         <NavigationBar />
       </Header>
       <Content className={styles.content}>
-        <Row className={styles.headerArea}>
+        <Row align="middle" className={styles.headerArea}>
           <Col flex={1}>
             <BoardPageTitleContainer />
           </Col>
