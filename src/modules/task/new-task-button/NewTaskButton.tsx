@@ -19,7 +19,7 @@ function NewTaskButton(props: NewTaskButtonProps) {
   const title = (
     <Space className={styles.title}>
       <DiffOutlined />
-      New board
+      New task
     </Space>
   );
 
