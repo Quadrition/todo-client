@@ -2,9 +2,11 @@ import { Board } from "../board/types";
 
 export const ADD_TASK = "task/add";
 
+export type Tag = "bug" | "feature" | "improve";
+
 export interface Task {
   name: string;
-  tags: string[];
+  tags: Tag[];
   type: "todo" | "done";
   board: Board;
 }
