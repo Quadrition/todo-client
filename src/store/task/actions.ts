@@ -5,6 +5,7 @@ import {
   Tag,
   Task,
   TaskActionTypes,
+  SWITCH_TYPE,
 } from "./types";
 
 export function addTask(task: Task): TaskActionTypes {
@@ -28,6 +29,13 @@ export function editTask(
 export function removeTask(task: Task): TaskActionTypes {
   return {
     type: REMOVE_TASK,
+    payload: { task },
+  };
+}
+
+export function switchType(task: Task): TaskActionTypes {
+  return {
+    type: SWITCH_TYPE,
     payload: { task },
   };
 }
