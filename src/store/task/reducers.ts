@@ -20,12 +20,11 @@ export function taskReducer(
         tasks: [...state.tasks, action.payload.task],
       };
     case EDIT_TASK:
-      const tasks = [...state.tasks];
-      tasks[tasks.indexOf(action.payload.task)].name = action.payload.name;
-      tasks[tasks.indexOf(action.payload.task)].tags = action.payload.tags;
+      action.payload.task.name = action.payload.name;
+      action.payload.task.tags = action.payload.tags;
       return {
         ...state,
-        tasks: [...tasks],
+        tasks: [...state.tasks],
       };
     case REMOVE_TASK:
       return {
@@ -33,12 +32,11 @@ export function taskReducer(
         tasks: [...state.tasks.filter((task) => task !== action.payload.task)],
       };
     case SWITCH_TYPE:
-      const old_tasks = [...state.tasks];
-      old_tasks[old_tasks.indexOf(action.payload.task)].type =
+      action.payload.task.type =
         action.payload.task.type === "done" ? "todo" : "done";
       return {
         ...state,
-        tasks: [...old_tasks],
+        tasks: [...state.tasks],
       };
     default:
       return state;
