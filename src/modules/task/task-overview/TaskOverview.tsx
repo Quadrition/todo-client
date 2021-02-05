@@ -3,7 +3,7 @@ import React from "react";
 import { TaskOverviewProps } from "./types";
 import TaskTag from "../task-tag/TaskTag";
 
-import { Button, Card, Col, Row, Space, Tag, Typography } from "antd";
+import { Button, Card, Col, Row, Space, Typography } from "antd";
 
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 
