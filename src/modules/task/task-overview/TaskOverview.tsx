@@ -11,7 +11,7 @@ const { Paragraph } = Typography;
 
 function TaskOverview(props: TaskOverviewProps) {
   return (
-    <Card size="small" hoverable style={{ maxWidth: 200 }}>
+    <Card size="small" hoverable style={{ maxWidth: 220 }}>
       <Row align="middle" wrap={false} gutter={10}>
         <Col flex="auto">
           <Paragraph ellipsis={{ rows: 2 }}>{props.task.name}</Paragraph>
