@@ -1,4 +1,11 @@
-import { ADD_TASK, EDIT_TASK, Tag, Task, TaskActionTypes } from "./types";
+import {
+  ADD_TASK,
+  DELETE_TASK,
+  EDIT_TASK,
+  Tag,
+  Task,
+  TaskActionTypes,
+} from "./types";
 
 export function addTask(task: Task): TaskActionTypes {
   return {
@@ -15,5 +22,12 @@ export function editTask(
   return {
     type: EDIT_TASK,
     payload: { name, tags, task },
+  };
+}
+
+export function deleteTask(task: Task): TaskActionTypes {
+  return {
+    type: DELETE_TASK,
+    payload: { task },
   };
 }

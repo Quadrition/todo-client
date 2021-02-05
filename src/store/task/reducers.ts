@@ -1,4 +1,10 @@
-import { ADD_TASK, EDIT_TASK, TaskActionTypes, TaskState } from "./types";
+import {
+  ADD_TASK,
+  DELETE_TASK,
+  EDIT_TASK,
+  TaskActionTypes,
+  TaskState,
+} from "./types";
 
 const initialState: TaskState = { tasks: [] };
 
@@ -19,6 +25,11 @@ export function taskReducer(
       return {
         ...state,
         tasks: [...tasks],
+      };
+    case DELETE_TASK:
+      return {
+        ...state,
+        tasks: [...state.tasks.filter((task) => task !== action.payload.task)],
       };
     default:
       return state;
