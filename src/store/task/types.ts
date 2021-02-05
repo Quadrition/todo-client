@@ -5,6 +5,7 @@ export const ADD_TASK = "task/add";
 export interface Task {
   name: string;
   tags: string[];
+  type: "todo" | "done";
   board: Board;
 }
 
