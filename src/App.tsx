@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import LoginPageContainer from "./modules/login/login-page/LoginPageContainer";
 import HomePage from "./modules/home/home-page/HomePage";
-import BoardPage from "./modules/board/board-page/BoardPage";
+import BoardPageContainer from "./modules/board/board-page/BoardPageContainer";
 
 import { Provider } from "react-redux";
 
@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/board">
-            <BoardPage />
+            <BoardPageContainer />
           </Route>
           <Route path="/login">
             <LoginPageContainer />
