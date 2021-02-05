@@ -1,6 +1,6 @@
 import {
   ADD_TASK,
-  DELETE_TASK,
+  REMOVE_TASK,
   EDIT_TASK,
   TaskActionTypes,
   TaskState,
@@ -26,7 +26,7 @@ export function taskReducer(
         ...state,
         tasks: [...tasks],
       };
-    case DELETE_TASK:
+    case REMOVE_TASK:
       return {
         ...state,
         tasks: [...state.tasks.filter((task) => task !== action.payload.task)],

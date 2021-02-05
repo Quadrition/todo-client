@@ -1,6 +1,6 @@
 import {
   ADD_TASK,
-  DELETE_TASK,
+  REMOVE_TASK,
   EDIT_TASK,
   Tag,
   Task,
@@ -25,9 +25,9 @@ export function editTask(
   };
 }
 
-export function deleteTask(task: Task): TaskActionTypes {
+export function removeTask(task: Task): TaskActionTypes {
   return {
-    type: DELETE_TASK,
+    type: REMOVE_TASK,
     payload: { task },
   };
 }
