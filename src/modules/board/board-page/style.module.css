@@ -18,11 +18,12 @@
 
 .headerArea {
   width: 100%;
-  max-width: 860px;
+  max-width: 1600px;
 }
 
 .tasksArea {
-  height: 100%;
   width: 100%;
-  max-width: 860px;
+  flex-grow: 1;
+  overflow: hidden;
+  max-width: 1600px;
 }

@@ -2,16 +2,17 @@ import React from "react";
 
 import styles from "./style.module.css";
 
-import BoardTodoArea from "../board-todo-area/BoardTodoArea";
+import BoardTodoAreaContainer from "../board-todo-area/BoardTodoAreaContainer";
 import NavigationBar from "../../../core/nav-bar/NavigationBar";
-import BoardDoneArea from "../board-done-area/BoardDoneArea";
+import BoardDoneAreaContainer from "../board-done-area/BoardDoneAreaContainer";
+import BoardPageTitleContainer from "../board-page-title/BoardPageTitleContainer";
+import { BoardPageProps } from "./types";
 
 import { Col, Layout, Row } from "antd";
-import BoardPageTitleContainer from "../board-page-title/BoardPageTitleContainer";
 
 const { Header, Content } = Layout;
 
-function BoardPage() {
+function BoardPage(props: BoardPageProps) {
   return (
     <Layout className={styles.layout}>
       <Header className={styles.header}>
@@ -23,12 +24,12 @@ function BoardPage() {
             <BoardPageTitleContainer />
           </Col>
         </Row>
-        <Row gutter={16} className={styles.tasksArea}>
-          <Col flex={1}>
-            <BoardTodoArea />
+        <Row wrap={false} gutter={16} className={styles.tasksArea}>
+          <Col span={12}>
+            <BoardTodoAreaContainer selectedBoard={props.selectedBoard} />
           </Col>
-          <Col flex={1}>
-            <BoardDoneArea />
+          <Col span={12}>
+            <BoardDoneAreaContainer selectedBoard={props.selectedBoard} />
           </Col>
         </Row>
       </Content>
