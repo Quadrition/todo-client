@@ -7,6 +7,7 @@ import NavigationBar from "../../../core/nav-bar/NavigationBar";
 import BoardDoneAreaContainer from "../board-done-area/BoardDoneAreaContainer";
 import BoardPageTitleContainer from "../board-page-title/BoardPageTitleContainer";
 import { BoardPageProps } from "./types";
+import NewTaskButtonContainer from "../../task/new-task-button/NewTaskButtonContainer";
 
 import { Col, Layout, Row } from "antd";
 
@@ -22,6 +23,9 @@ function BoardPage(props: BoardPageProps) {
         <Row className={styles.headerArea}>
           <Col flex={1}>
             <BoardPageTitleContainer />
+          </Col>
+          <Col>
+            <NewTaskButtonContainer selectedBoard={props.selectedBoard} />
           </Col>
         </Row>
         <Row wrap={false} gutter={16} className={styles.tasksArea}>
