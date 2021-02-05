@@ -18,13 +18,15 @@ function BoardTodoArea(props: BoardTodoAreaProps) {
   );
 
   return (
-    <Card title={title} className={styles.root}>
-      <Space direction="horizontal" wrap>
-        {props.tasks.map((task) => (
-          <TaskOverviewContainer task={task} />
-        ))}
-      </Space>
-    </Card>
+    <div ref={props.drop} className={styles.drop}>
+      <Card title={title} className={styles.root}>
+        <Space direction="horizontal" wrap>
+          {props.tasks.map((task) => (
+            <TaskOverviewContainer task={task} />
+          ))}
+        </Space>
+      </Card>
+    </div>
   );
 }
 

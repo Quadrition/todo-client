@@ -9,6 +9,9 @@ import BoardPageTitleContainer from "../board-page-title/BoardPageTitleContainer
 import { BoardPageProps } from "./types";
 import NewTaskButtonContainer from "../../task/new-task-button/NewTaskButtonContainer";
 
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
 import { Col, Layout, Row } from "antd";
 
 const { Header, Content } = Layout;
@@ -28,14 +31,16 @@ function BoardPage(props: BoardPageProps) {
             <NewTaskButtonContainer selectedBoard={props.selectedBoard} />
           </Col>
         </Row>
-        <Row wrap={false} gutter={16} className={styles.tasksArea}>
-          <Col span={12}>
-            <BoardTodoAreaContainer selectedBoard={props.selectedBoard} />
-          </Col>
-          <Col span={12}>
-            <BoardDoneAreaContainer selectedBoard={props.selectedBoard} />
-          </Col>
-        </Row>
+        <DndProvider backend={HTML5Backend}>
+          <Row wrap={false} gutter={16} className={styles.tasksArea}>
+            <Col span={12}>
+              <BoardTodoAreaContainer selectedBoard={props.selectedBoard} />
+            </Col>
+            <Col span={12}>
+              <BoardDoneAreaContainer selectedBoard={props.selectedBoard} />
+            </Col>
+          </Row>
+        </DndProvider>
       </Content>
     </Layout>
   );

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useDrop } from "react-dnd";
+
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
 
@@ -13,7 +15,16 @@ function BoardDoneAreaContainer(props: BoardDoneAreaContainerProps) {
     )
   );
 
-  return <BoardDoneArea tasks={tasks} />;
+  const [, drop] = useDrop({
+    accept: "todo",
+    drop: () => ({ name: "DoneArea" }),
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+      canDrop: monitor.canDrop(),
+    }),
+  });
+
+  return <BoardDoneArea drop={drop} tasks={tasks} />;
 }
 
 export default BoardDoneAreaContainer;
