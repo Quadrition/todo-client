@@ -1,7 +1,8 @@
 import React from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { RootState } from "../../../store";
 
 import { setSelectedBoard } from "../../../store/board/actions";
 
@@ -12,7 +13,21 @@ function BoardOverviewContainer(props: BoardOverviewContainerProps) {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const tasks: number = Math.floor(Math.random() * 10);
+  const tasks = useSelector((state: RootState) => {
+    const tasks = state.task.tasks.filter((task) => task.board === props.board);
+
+    if (tasks.length === 0) {
+      return { count: 0, done: false };
+    }
+    const doneCount = tasks.filter((task) => task.type === "done").length;
+    const todoCount = tasks.filter((task) => task.type === "todo").length;
+
+    if (todoCount === 0) {
+      return { count: doneCount, done: true };
+    } else {
+      return { count: todoCount, done: false };
+    }
+  });
 
   const handleBoardClick = () => {
     history.push("/board");

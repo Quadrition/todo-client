@@ -12,7 +12,10 @@ const { Meta } = Card;
 
 function BoardOverview(props: BoardOverviewProps) {
   return (
-    <Badge count={props.tasks}>
+    <Badge
+      count={props.tasks.count}
+      style={props.tasks.done ? { backgroundColor: "#52c41a" } : {}}
+    >
       <Card
         hoverable
         onClick={props.onBoardClick}
