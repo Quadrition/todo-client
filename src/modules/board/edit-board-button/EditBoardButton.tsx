@@ -8,7 +8,11 @@ import { AlignLeftOutlined, EditOutlined } from "@ant-design/icons";
 
 function EditBoardButton(props: EditBoardButtonProps) {
   const content = (
-    <Form onFinish={props.onEdit} form={props.form}>
+    <Form
+      onFinish={props.onEdit}
+      form={props.form}
+      onClick={props.onPropagationClick}
+    >
       <Space direction="vertical" size={0} align="end">
         <Form.Item
           initialValue={props.board.name}
@@ -44,7 +48,7 @@ function EditBoardButton(props: EditBoardButtonProps) {
       visible={props.popoverVisible}
       onVisibleChange={props.onPopoverVisibleChange}
     >
-      <EditOutlined onClick={props.onEditButtonClick} />
+      <EditOutlined onClick={props.onPropagationClick} />
     </Popover>
   );
 }
